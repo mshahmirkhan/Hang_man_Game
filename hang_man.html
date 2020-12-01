@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang man</title>
+</head>
+
+<style>
+    body{
+        background-color: bisque;
+    }
+#heading{
+    margin-top: 20px;
+
+}
+#image{
+    margin-top: 70px;
+    width: 500px;
+    height: 500px;
+}
+</style>
+
+<body>
+    <center><h1 id="heading">HANG MAN</h1></center>
+    <center><p><b>HINT : </b> Who is Shahmir Favorite WEB TEACHER (Sajida) </p></center>
+
+    <center>
+        
+            <input typer="text" placeholder="Ma'am Sajida" id="textArea" value="KINg">
+            <button onclick="check()">Check</button>
+        
+    </center>
+
+    <center>
+        <img id="image" src="hang man body parts/best.png"/>
+    </center>
+
+
+
+    <script>
+            counter=0;
+        check=()=>{
+            counter++;
+            e=document.getElementById("textArea").value;
+            // console.log(e);
+            if(e== "Sajada" ){
+                document.getElementById("image").src='hang man body parts/right.png';
+            }
+            // console.log(counter)
+            if (e!="Sajada" && counter==1){
+                document.getElementById("image").src='hang man body parts/head.png';
+            }
+            if (e!="Sajada" && counter==2){
+                document.getElementById("image").src='hang man body parts/2.png';
+            }
+            if (e!="Sajada" && counter==3){
+                document.getElementById("image").src='hang man body parts/3.png';
+            }
+            if (e!="Sajada" && counter==4){
+                document.getElementById("image").src='hang man body parts/4.png';
+            }
+            if (e!="Sajada" && counter==5){
+                document.getElementById("image").src='hang man body parts/5.png';
+            }
+            if (e!="Sajada" && counter==6){
+                document.getElementById("image").src='hang man body parts/6.png';
+            }
+            if (e!="Sajada" && counter==7){
+                document.getElementById("image").src='hang man body parts/7.png';
+            }
+            if (e!="Sajada" && counter==8){
+                document.getElementById("image").src='hang man body parts/8.png';
+            }
+            if (e!="Sajada" && counter==9){
+                document.getElementById("image").src='hang man body parts/9.png';
+            }
+            if (e!="Sajada" && counter==10){
+                document.getElementById("image").src='hang man body parts/10.png';
+
+                setTimeout(()=>{
+                    document.getElementById("image").src='hang man body parts/dead.png';
+                }, 2000)
+            }
+        }
+    </script>
+</body>
+</html>
